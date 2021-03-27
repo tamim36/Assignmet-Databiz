@@ -1,0 +1,44 @@
+﻿@model WebService.Models.Employee
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h4>Employee Form</h4>
+<hr />
+<div class="col-md-6">
+    <form asp-action="AddorEdit">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="EmployeeId" />
+        <div class="form-group">
+            <label asp-for="Name" class="control-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="DepartmentId" class="control-label"></label>
+            <input asp-for="DepartmentId" class="form-control" />
+            <span asp-validation-for="DepartmentId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PhoneNo" class="control-label"></label>
+            <input asp-for="PhoneNo" class="form-control" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Address" class="control-label"></label>
+            <input asp-for="Address" class="form-control" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <input type="submit" value="Submit" class="btn btn-secondary btn-block" />
+            </div>
+            <div class="form-group col-md-6">
+                <a asp-action="Index" class="btn btn-secondary btn-block"><i class="fa fa-table"></i> Back to List</a>
+            </div>
+        </div>
+    </form>
+</div>
+
